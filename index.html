@@ -937,14 +937,14 @@ let pcbs          = STORE.get('pcbs')          || [];
 let logs          = STORE.get('logs')          || [];
 let activityLog   = STORE.get('activityLog')   || [];
 let notifications = STORE.get('notifs')        || [];
-let gsConfig      = STORE.get('gsConfig')      || { url:'', sheet:'EcolyserData' };
+let gsConfig      = STORE.get('gsConfig')      || { url:'', sheet:'TASK SHEET INTERNAL' };
 let hodPassword   = STORE.get('hodPwd')        || DEFAULT_PASSWORDS[HOD_NAME];
 let userPasswords = STORE.get('userPwds')      || {};
 FIXED_MEMBERS.forEach(m=>{ if(!userPasswords[m]) userPasswords[m]=DEFAULT_PASSWORDS[m]; });
 STORE.set('userPwds', userPasswords);
 
 // Firebase config — load and activate
-let fbConfig = STORE.get('fbConfig') || { url: '' };
+let fbConfig = STORE.get('fbConfig') || { url: 'https://affable-heading-436917-v5-default-rtdb.firebaseio.com/' };
 _fbUrl = fbConfig.url || '';
 
 let currentUser  = '';
